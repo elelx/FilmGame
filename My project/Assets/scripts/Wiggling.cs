@@ -16,9 +16,14 @@ public class Wiggling : MonoBehaviour
         
     }
 
-    public void StartWiggle()
+    public void StartWiggleY()
     {
-        StartCoroutine(Wiggle());
+        StartCoroutine(WiggleY());
+    }
+
+    public void StartWiggleX()
+    {
+        StartCoroutine(WiggleX());
     }
 
 
@@ -29,7 +34,23 @@ public class Wiggling : MonoBehaviour
 
     }
 
-    IEnumerator Wiggle()
+    IEnumerator WiggleY()
+    {
+        float time = 0;
+        Vector3 startPos = transform.localPosition;
+
+        while (time < duration)
+        {
+            float y = Mathf.Sin(time * speed) * distance * (1 - (time / duration));
+            transform.localPosition = startPos + new Vector3(0, y, 0);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localPosition = startPos;
+    }
+
+    IEnumerator WiggleX()
     {
         float time = 0;
         Vector3 startPos = transform.localPosition;
@@ -44,6 +65,5 @@ public class Wiggling : MonoBehaviour
 
         transform.localPosition = startPos;
     }
-
 
 }
