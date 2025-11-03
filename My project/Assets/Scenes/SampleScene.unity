@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008531324}
   - component: {fileID: 1008531325}
+  - component: {fileID: 1008531326}
   m_Layer: 0
   m_Name: Pushing
   m_TagString: Untagged
@@ -298,6 +299,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1008531326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008531323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc79da05cad6405c92cf6c0566ab16d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 5
+  speed: 10
+  duration: 0.5
 --- !u!1 &2140398348
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +346,10 @@ MonoBehaviour:
   PressingKeys: 0
   PushTimer: 0
   PushCountdown: 0
+  distance: 2
+  speed: 20
+  duration: 1
+  wiggle: {fileID: 1008531326}
 --- !u!4 &2140398350
 Transform:
   m_ObjectHideFlags: 0

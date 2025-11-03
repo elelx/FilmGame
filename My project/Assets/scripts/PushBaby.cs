@@ -13,14 +13,14 @@ public class PushBaby : MonoBehaviour
    
 
     //----------
+    public float distance = 0.1f;
+    public float speed = 10f;
+    public float duration = 0.5f;
 
-    float duration = 1f;
-    float speed = 20f;
-    float distance = 2f;
-    float time = 0f;
+    public Wiggling wiggle;
 
-
-
+  
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -30,18 +30,26 @@ public class PushBaby : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)&& Input.GetKeyDown(KeyCode.J) && Input.GetKeyDown(KeyCode.L))
+        if(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.L))
         {
-            Debug.Log("pressing");
+            Debug.Log("out");
 
-            PushTheBaby();
+            //PushTheBaby();
+            wiggle.StartWiggle();
+            
+        }
+
+        if (Input.GetKeyDown(KeyCode.D)&& Input.GetKeyDown(KeyCode.J))
+        {
+            Debug.Log("In");
         }
     }
 
 
-void PushTheBaby()
-{
+ 
+//    void PushTheBaby()
+//{
     
 
-}
+//}
 }
