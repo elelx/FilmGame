@@ -7,6 +7,8 @@ public class MoveUp : MonoBehaviour
     public int moveAmount = 1;
     public int moveAmount2 = 1;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
